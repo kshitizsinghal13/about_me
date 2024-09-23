@@ -15,7 +15,7 @@ body {
 .container {
     text-align: center;
     padding: 20px;
-    max-width: 90%; /* Changed from fixed width to percentage */
+    max-width: 90%; /* Use percentage for responsiveness */
     margin: auto;
     background-color: white;
     border-radius: 40px;
@@ -28,14 +28,15 @@ body {
 }
 
 .name {
-    font-size: 2em; /* Adjusted font size for better responsiveness */
+    font-size: 2em; 
     color: #333;
 }
 
 .profile-photo {
-    width: 100%; /* Use full width of the container */
+    width: 100%; /* Full width of the container */
+    max-width: 340px; /* Limit maximum width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make it circular */
+    border-radius: 50%; 
     margin-top: 15px;
 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -47,7 +48,7 @@ body {
 }
 
 .skills {
-    font-size: 1em; /* Adjusted font size for better responsiveness */
+    font-size: 1em; 
     color: #555;
 }
 
@@ -75,76 +76,56 @@ body {
 }
 
 .connect-container {
-    max-width: 90%; /* Changed from fixed width to percentage */
-    margin-top: 40px; /* Reduced top margin for better spacing */
-    margin: auto;
-    padding: 60px; 
-    background-color: rgba(255,255,255,0.9); /* Slightly transparent white background */
-    border-radius: 20px; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+   max-width: 90%; /* Use percentage for responsiveness */
+   margin-top: 40px; 
+   margin: auto;
+   padding: 60px; 
+   background-color: rgba(255,255,255,0.9); 
+   border-radius: 20px; 
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .connect-container:hover {
-    transform: translateY(-5px); 
+   transform: translateY(-5px); 
 }
 
 h2 {
-    color: #333; 
-    margin-bottom: 10px; 
-    text-decoration: underline;
+   color: #333; 
+   margin-bottom: 10px; 
+   text-decoration: underline;
 }
 
 button {
-    padding: 12px; 
-    background-color: #0077b5; 
-    color: white; 
-    border-radius: 5px; 
-    border: none; 
+   padding: 12px; 
+   background-color: #0077b5; 
+   color:white ; 
+   border-radius :5 px ; 
+   border:none ; 
 
-   cursor: pointer;
+   cursor:pointer ;
 
-   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+   transition :background-color .3s ease-in-out ,transform .3s ease-in-out ; 
 }
 
 button:hover {
-   background-color: #005582; 
-   transform: translateY(-2px); 
-}
-
-.linkedin2 {
-   display:inline-block;
-   margin-top :20px ;
-   padding :10 px20 px ;
-   background-color :#b402d7 ; /* LinkedIn color */
-   color:white ;
-   text-decoration:none ;
-   border-radius :5 px ;
-}
-
-.linkedin2:hover {
-   background-color :#fd5821 ; /* Darker shade on hover */
+   background-color :#005582 ; 
+   transform :translateY(-2 px ); 
 }
 
 /* Media Queries for Responsiveness */
 
-@media (max-width: 768px) {
+@media (min-width:768px) { /* Adjust styles for larger screens */
+   .profile-photo {
+       max-width :300 px ; /* Set a specific max width for larger screens */
+       height:auto ; /* Maintain aspect ratio */
+   }
+
    .name {
-       font-size: 1.8em; /* Smaller font size on mobile */
+       font-size :2.5 em ; /* Larger font size on desktop */
    }
 
    .skills,
    .education li {
-       font-size: 1em; /* Smaller font size on mobile */
-   }
-
-   .profile-photo {
-       width: auto; /* Allow image to resize properly */
-       height:auto ; /* Maintain aspect ratio */
-       max-width :90%; /* Limit max width on mobile */
-   }
-
-   .connect-container {
-       padding :30 px ; /* Reduced padding for smaller screens */
-       margin-top :20 px ; /* Adjusted top margin */
+       font-size :1.2 em ; /* Slightly larger font size on desktop */
    }
 }
