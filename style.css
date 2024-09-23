@@ -15,112 +15,136 @@ body {
 .container {
     text-align: center;
     padding: 20px;
-    max-width: 600px;
+    max-width: 90%; /* Changed from fixed width to percentage */
     margin: auto;
     background-color: white;
     border-radius: 40px;
     box-shadow: 0 17px 36px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    transition: transform 0.3s ease; 
 }
 
 .container:hover {
-    transform: translateY(-10px) rotateY(10deg) rotateX(10deg); /* Apply same hover effect */
+    transform: translateY(-10px) rotateY(10deg) rotateX(10deg); 
 }
 
 .name {
-    font-size: 2.5em;
+    font-size: 2em; /* Adjusted font size for better responsiveness */
     color: #333;
 }
 
 .profile-photo {
-    width: 340px; /* Adjust width as needed */
-    height: 300px; /* Adjust height as needed */
-    border-radius: 30%; /* Make it circular */
+    width: 100%; /* Use full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it circular */
     margin-top: 15px;
 
-    /* Add 3D effect */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; 
 }
 
 .profile-photo:hover {
-    transform: translateY(-10px) rotateY(10deg) rotateX(10deg); /* Move up and rotate for effect */
+    transform: translateY(-10px) rotateY(10deg) rotateX(10deg); 
 }
 
 .skills {
-    font-size: 1.2em;
+    font-size: 1em; /* Adjusted font size for better responsiveness */
     color: #555;
 }
 
 .education {
-    list-style-type: none; /* Remove bullet points */
-    padding-left: 0; /* Remove padding */
+    list-style-type: none; 
+    padding-left: 0; 
 }
 
 .education li {
-    margin: 10px 0; /* Space between items */
+    margin: 10px 0; 
 }
 
 .linkedin {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #0077b5; /* LinkedIn color */
+    background-color: #0077b5; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .linkedin:hover {
-    background-color: #005582; /* Darker shade on hover */
+    background-color: #005582; 
 }
+
 .connect-container {
-    max-width: 600px; /* Same as the profile container */
-    margin-top: 240px;
+    max-width: 90%; /* Changed from fixed width to percentage */
+    margin-top: 40px; /* Reduced top margin for better spacing */
     margin: auto;
-    padding: 60px; /* Add some padding */
-    background-color: white; /* Slightly transparent white background */
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    padding: 60px; 
+    background-color: rgba(255,255,255,0.9); /* Slightly transparent white background */
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .connect-container:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px); 
 }
 
 h2 {
-    color: #333; /* Dark text for headings */
-    margin-bottom: 10px; /* Space below heading */
-    text-decoration:underline;
+    color: #333; 
+    margin-bottom: 10px; 
+    text-decoration: underline;
 }
 
-
 button {
-    padding: 12px; /* Padding inside button */
-    background-color: #0077b5; /* Button color */
-    color: white; /* Text color */
-    border-radius: 5px; /* Rounded corners */
-    border: none; /* Remove border */
-    cursor: pointer; /* Pointer cursor on hover */
+    padding: 12px; 
+    background-color: #0077b5; 
+    color: white; 
+    border-radius: 5px; 
+    border: none; 
 
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+   cursor: pointer;
+
+   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
 
 button:hover {
-   background-color: #005582; /* Darker shade on hover */
-   transform: translateY(-2px); /* Slight lift effect on hover */
+   background-color: #005582; 
+   transform: translateY(-2px); 
 }
+
 .linkedin2 {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #b402d7; /* LinkedIn color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+   display:inline-block;
+   margin-top :20px ;
+   padding :10 px20 px ;
+   background-color :#b402d7 ; /* LinkedIn color */
+   color:white ;
+   text-decoration:none ;
+   border-radius :5 px ;
 }
 
 .linkedin2:hover {
-    background-color: #fd5821; /* Darker shade on hover */
+   background-color :#fd5821 ; /* Darker shade on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+   .name {
+       font-size: 1.8em; /* Smaller font size on mobile */
+   }
+
+   .skills,
+   .education li {
+       font-size: 1em; /* Smaller font size on mobile */
+   }
+
+   .profile-photo {
+       width: auto; /* Allow image to resize properly */
+       height:auto ; /* Maintain aspect ratio */
+       max-width :90%; /* Limit max width on mobile */
+   }
+
+   .connect-container {
+       padding :30 px ; /* Reduced padding for smaller screens */
+       margin-top :20 px ; /* Adjusted top margin */
+   }
 }
